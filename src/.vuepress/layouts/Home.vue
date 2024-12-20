@@ -5,7 +5,7 @@
     <main>
       <Content />
     </main>
-    <footer>My Custom Footer</footer>
+    <!-- <footer>My Custom Footer</footer> -->
   </div>
 </template>
 
