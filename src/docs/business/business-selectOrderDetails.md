@@ -1,5 +1,16 @@
-#### 查询订单详情信息接口 
-*更新时间： 2024-12-13*
+---
+title: 查询订单详情信息接口  
+date: 2024-12-13
+description: 创建订单后，可以通过该接口查询订单当前相关配送信息
+author: 江建莉
+
+# tags:
+#     - tag1
+#     - tag2
+category:
+  - 业务管理
+---
+
 > ***创建订单后，可以通过该接口查询订单当前相关配送信息***
 
 - 接口地址：/uocs-tes/waybill/api/selectOrderDetails

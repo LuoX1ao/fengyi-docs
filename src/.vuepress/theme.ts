@@ -1,4 +1,4 @@
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme, sidebarFilenameSorter } from "vuepress-theme-hope";
 
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
@@ -99,21 +99,31 @@ export default hopeTheme(
           text: "业务管理",
           collapsible: true,
           children: [
-            "/docs/business/",
+            "/docs/business/business-apisAuth.md",
+            "/docs/business/business-callback-land.md",
+            "/docs/business/business-callback-pickup.md",
+            "/docs/business/business-callback-takeoff.md",
+            "/docs/business/business-callback-uavStatus.md",
+            "/docs/business/business-callback-waybillstatus.md",
+            "/docs/business/business-carrierWaybill.md",
+            "/docs/business/business-createWaybill.md",
+            "/docs/business/business-h5-orderH5View.md",
+            "/docs/business/business-selectOrderDetails.md",
           ],
         },
         {
           text: "飞行管理",
           collapsible: true,
           children: [
-            "/docs/flight/"
+            "/docs/flight/flym-task-push.md",
+            "/docs/flight/flym-uavpos-push.md",
           ],
         },
         {
           text: "资源管理",
           collapsible: true,
           children: [
-            "/docs/resource/"
+            // "/docs/resource/"
           ],
         },
       ]
