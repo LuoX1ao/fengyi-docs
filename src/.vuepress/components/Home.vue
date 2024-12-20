@@ -4,7 +4,7 @@
       <div class="section-hero-inner">
         <h4 class="section-hero-title">丰翼开放平台</h4>
         <p class="section-hero-sub-title">以生态智慧释放行业生产力无限可能</p>
-        <router-link to="/guide/" class="go-guide">
+        <router-link to="/guide/develop/" class="go-guide">
           我要接入<span class="arrow-right"></span>
         </router-link>
       </div>
