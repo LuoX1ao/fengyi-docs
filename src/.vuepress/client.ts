@@ -21,7 +21,6 @@ export default defineClientConfig({
   setup() {
     // 切换 favicon 的函数
     const setFavicon = (isDarkMode: boolean) => {
-      debugger
       const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
       if (link) {
         link.href = isDarkMode ? "/favicon-dark.png" : "/favicon.png";
@@ -38,25 +37,27 @@ export default defineClientConfig({
         document.head.appendChild(link);
       }
     };
+    if (typeof window !== "undefined") {
+      // 检测暗黑模式并切换 favicon
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // 检测暗黑模式并切换 favicon
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      // 初次加载时设置 favicon
+      setFavicon(mediaQuery.matches);
 
-    // 初次加载时设置 favicon
-    setFavicon(mediaQuery.matches);
+      // 监听系统主题切换事件
+      mediaQuery.addEventListener("change", (event) => {
+        setFavicon(event.matches);
+      });
 
-    // 监听系统主题切换事件
-    mediaQuery.addEventListener("change", (event) => {
-      setFavicon(event.matches);
-    });
+      // 如果主题切换是通过 vuepress 切换按钮触发的
+      const body = document.querySelector("body");
+      const observer = new MutationObserver(() => {
+        const isDarkMode = body?.classList.contains("dark");
+        setFavicon(!!isDarkMode);
+      });
 
-    // 如果主题切换是通过 vuepress 切换按钮触发的
-    const body = document.querySelector("body");
-    const observer = new MutationObserver(() => {
-      const isDarkMode = body?.classList.contains("dark");
-      setFavicon(!!isDarkMode);
-    });
-
-    observer.observe(body!, { attributes: true });
+      observer.observe(body!, { attributes: true });
+    }
+    
   },
 })
