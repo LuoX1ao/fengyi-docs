@@ -37,7 +37,7 @@ export default defineClientConfig({
         document.head.appendChild(link);
       }
     };
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" ) {
       // 检测暗黑模式并切换 favicon
       const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
