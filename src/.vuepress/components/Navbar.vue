@@ -36,7 +36,7 @@ export default {
         },
         {
           name: "开发文档",
-          path: "/docs/business/",
+          path: "/docs/business/business-apisAuth.md",
           active: false,
         },
       ],
