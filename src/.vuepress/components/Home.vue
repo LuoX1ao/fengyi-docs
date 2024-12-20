@@ -175,7 +175,7 @@ const handleMouseenterApplication = (i) => {
 
 .section-title {
   display: inline-block;
-  color: #000;
+  color: var(--vp-c-text, rgb(60, 60, 67));
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -187,6 +187,10 @@ const handleMouseenterApplication = (i) => {
   background-repeat: no-repeat;
   padding: 0 10px;
   margin: 0;
+}
+
+[data-theme=dark] .section-title {
+  background-image: none;
 }
 
 .section-api .section-content {

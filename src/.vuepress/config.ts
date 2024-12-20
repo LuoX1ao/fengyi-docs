@@ -28,5 +28,9 @@ export default defineUserConfig({
       __dirname,
       "./components/Navbar.vue",
     ),
+    // '@theme-hope/components/PageFooter': path.resolve(
+    //   __dirname,
+    //   "./components/PageFooter.vue",
+    // )
   },
 });

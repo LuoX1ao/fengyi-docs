@@ -3,7 +3,7 @@ title: 接驳柜取件事件推送 (回调)
 date: 2024-12-13
 description: 接系统提供回调url,丰翼将取件码推送回调系统
 author: 江建莉
-
+order: 7
 # tags:
 #     - tag1
 #     - tag2

@@ -3,7 +3,6 @@ title: 查询订单详情信息接口
 date: 2024-12-13
 description: 创建订单后，可以通过该接口查询订单当前相关配送信息
 author: 江建莉
-
 # tags:
 #     - tag1
 #     - tag2

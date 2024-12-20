@@ -3,7 +3,6 @@ title: 订单状态推送接口 (回调)
 date: 2024-12-13
 description: 对接系统提供回调url,丰翼将实时推送订单状态给回调系统
 author: 江建莉
-
 # tags:
 #     - tag1
 #     - tag2

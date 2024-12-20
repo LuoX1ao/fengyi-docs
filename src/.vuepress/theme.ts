@@ -5,6 +5,7 @@ import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme(
   {
+    
     // hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
     // author: {
@@ -100,15 +101,14 @@ export default hopeTheme(
           collapsible: true,
           children: [
             "/docs/business/business-apisAuth.md",
-            "/docs/business/business-callback-land.md",
-            "/docs/business/business-callback-pickup.md",
-            "/docs/business/business-callback-takeoff.md",
-            "/docs/business/business-callback-uavStatus.md",
-            "/docs/business/business-callback-waybillstatus.md",
             "/docs/business/business-carrierWaybill.md",
             "/docs/business/business-createWaybill.md",
-            "/docs/business/business-h5-orderH5View.md",
             "/docs/business/business-selectOrderDetails.md",
+            "/docs/business/business-h5-orderH5View.md",
+            "/docs/business/business-callback-waybillstatus.md",
+            "/docs/business/business-callback-pickup.md",
+            "/docs/business/business-callback-takeoff.md",
+            "/docs/business/business-callback-land.md",
           ],
         },
         {
@@ -280,7 +280,7 @@ export default hopeTheme(
       components: {
         components: ["Badge", "VPCard"],
       },
-
+      
       // Install @vuepress/plugin-pwa and uncomment these if you want a PWA
       // pwa: {
       //   favicon: "/favicon.ico",
