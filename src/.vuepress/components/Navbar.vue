@@ -91,14 +91,15 @@ export default {
   box-shadow: 0px 2px 2.5px 0px rgba(0, 0, 0, 0.1);
 }
 .header-inner {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
 .header .logo {
-  width: 204px;
+  width: 180px;
   height: 48px;
   background-image: url("/assets/image/home-logo.svg");
   background-size: 100%;
@@ -116,7 +117,7 @@ export default {
 .header .nav-bar a {
   margin-right: 116px;
   color: #383838;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

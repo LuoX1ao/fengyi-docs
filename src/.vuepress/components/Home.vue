@@ -100,27 +100,33 @@ const handleMouseenterApplication = (i) => {
   padding-bottom: 108px;
 }
 .section-hero {
+  position: relative;
   height: 450px;
   width: 100%;
-  background-image: url("/assets/image/home-hero.jpg");
+  background-image: url(/assets/image/home-hero.jpg);
   background-position: center center;
-  background-size: auto 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section-hero-inner {
-  position: relative;
-  width: 1200px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
 
 .section-hero-title {
   position: absolute;
-  top: 107px;
+  top: 112px;
   left: 0;
   margin: 0;
   color: #000;
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 600;
 }
 .section-hero-sub-title {
@@ -161,8 +167,37 @@ const handleMouseenterApplication = (i) => {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 1440px) {
+  .section-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .section-hero-title {
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.section-hero-sub-title {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.go-guide {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+}
+
+
 .section {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .section-api {
@@ -195,7 +230,7 @@ const handleMouseenterApplication = (i) => {
 
 .section-api .section-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 32px;
 }
 
@@ -293,7 +328,7 @@ const handleMouseenterApplication = (i) => {
 
 .section-applications .section-content .application-item {
   position: relative;
-  width: 200px;
+  width: 18%;
   height: 457px;
   border-radius: 8px;
   background-size: 757px 457px;
@@ -326,7 +361,7 @@ const handleMouseenterApplication = (i) => {
 }
 
 .section-applications .section-content .application-item.active {
-  width: 757px;
+  width: 60%;
 }
 
 .section-applications .section-content .application-icon {
