@@ -258,6 +258,7 @@ export default hopeTheme(
     },
 
     plugins: {
+      readingTime: false,
       // Note: This is for testing ONLY!
       // You MUST generate and use your own comment service in production.
       // comment: {

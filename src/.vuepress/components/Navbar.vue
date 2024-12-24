@@ -110,22 +110,22 @@ export default {
 .header .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+justify-content: space-between;
   margin-left: 130px;
 }
 
 .header .nav-bar a {
   margin-right: 116px;
   color: #383838;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: normal;
   cursor: pointer;
 }
 
 .header .nav-bar a.current {
   color: #b91818;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 </style>
