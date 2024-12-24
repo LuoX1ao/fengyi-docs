@@ -41,7 +41,6 @@ th, td {
 
 th {
   font-weight: 600;
-  color: #000;
   min-width: 4rem;
 }
 
@@ -51,6 +50,5 @@ table,tbody,thead {
 }
 
 tbody tr:nth-child(odd) {
-  background: #fff;
-  // transition: background-color var(--vp-t-color);
+  background: transparent;
 }
