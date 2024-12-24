@@ -13,7 +13,7 @@ export default defineClientConfig({
 
     router.beforeEach((to, from, next) => {
       console.log(`全局守卫：从 ${from.path} 到 ${to.path}`);
-      // 可以在这里触发公共组件的逻辑
+      document.title = '丰翼开放平台'
       next(); // 必须调用 next() 继续导航
     });
   },
