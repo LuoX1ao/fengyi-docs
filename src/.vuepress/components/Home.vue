@@ -368,11 +368,13 @@ const handleMouseenterApplication = (i) => {
   display: block;
   position: absolute;
   top: 303px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 36px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   width: 50px;
   height: 50px;
   background-size: 100% 100%;
+  transition: all 0.6s;
 }
 
 .section-applications
@@ -401,8 +403,9 @@ const handleMouseenterApplication = (i) => {
   display: inline-block;
   position: absolute;
   top: 367px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 36px;
+  /* left: 50%;
+  transform: translateX(-50%); */
   margin: 0;
   color: #fff;
   font-family: "PingFang SC";
