@@ -23,6 +23,12 @@ export default defineUserConfig({
       // description: "vuepress-theme-hope 的文档演示",
     },
   },
+  head: [
+    [
+      'link',
+      { rel: 'shortcut icon', href: '/logo.svg' }
+    ],
+  ],
 
   theme,
   alias: {
