@@ -8,7 +8,7 @@ export default defineUserConfig({
   base: "/",
   lang: 'zh-CN',
   title: '丰翼开放平台',
-  description: '丰翼开放平台',
+  description: '以生态智慧释放行业生产力无限可能',
 
   // 暂不需支持国际化
   locales: {
