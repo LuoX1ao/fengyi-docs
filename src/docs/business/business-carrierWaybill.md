@@ -16,43 +16,43 @@ category:
 - 请求方法：POST
 - 请求参数
 
-    |字段名			|属性	    |类型	|是否必传	|说明                                            |
-    |---------------|-----------|-------|-----------|------------------------------------------------|
-	|devCode		|			|String	|是			|企业账号                                        |
-	|gpsType		|			|Int	|是			|默认坐标系类型 1：WGS－84                       |
-	|senderLon		|			|String	|是			|寄件人地址经度                                  |
-	|senderLat		|			|String	|是			|寄件人地址纬度                                  |
-	|goodsType		|			|Int	|是			|货物类型 默认传 10快递                          |
-	|goodsWeight	|			|Int	|是			|货物重量(g) 默认传 2000                         |
-	|receiverLon	|			|String	|是			|收件人地址经度                                  |
-	|receiverLat	|			|String	|是			|收件人地址纬度                                  |
+    | 字段名      | 属性 | 类型   | 是否必传 | 说明                      |
+    | ----------- | ---- | ------ | -------- | ------------------------- |
+    | devCode     |      | String | 是       | 企业账号                  |
+    | gpsType     |      | Int    | 是       | 默认坐标系类型 1：WGS－84 |
+    | senderLon   |      | String | 是       | 寄件人地址经度            |
+    | senderLat   |      | String | 是       | 寄件人地址纬度            |
+    | goodsType   |      | Int    | 是       | 货物类型 默认传 10快递    |
+    | goodsWeight |      | Int    | 是       | 货物重量(g) 默认传 2000   |
+    | receiverLon |      | String | 是       | 收件人地址经度            |
+    | receiverLat |      | String | 是       | 收件人地址纬度            |
 
 	
 - 请求响应参数
 
-    |字段名	 		|属性	    |类型	|是否必传	|说明	                                        |
-    |---------------|-----------|-------|-----------|-----------------------------------------------|
-	|requestId		|			|String	|是			|请求唯一标识                                   |
-	|success		|			|Boolean|是			|true:成功 false:失败                           |
-	|errorCode		|			|String	|否			|请求错误码                                     |
-	|errorMessage	|			|String	|否			|请求错误信息(不可承运原因)                     |
-	|date			|			|String	|是			|当前处理日期                                   |
-	|version		|			|String	|否			|当前版本信息                                   |
-	|obj			|			|T		|否			|业务结果类                                     |
-	|				|gpsType	|Int	|是			|默认坐标系类型 1：WGS－84                      |
-	|				|takeoffCode|String	|是			|起飞场航站代码                                 |
-	|				|takeoffLon	|String	|是			|起飞场航站经度                                 |
-	|				|takeoffLat	|String	|是			|起飞场航站纬度                                 |
-	|				|takeoffName|String	|是			|起飞场航站名称                                 |
-	|				|takeoffAddr|String	|是			|起飞场航站地址                                 |
-	|				|takeoffTel	|String	|是			|起飞场航站手机                                 |
-	|				|landingCode|String	|是			|降落场航站代码                                 |
-	|				|landingLon	|String	|是			|降落场航站经度                                 |
-	|				|landingLat	|String	|是			|降落场航站纬度                                 |
-	|				|landingName|String	|是			|降落场航站名称                                 |
-	|				|landingAddr|String	|是			|降落场航站地址                                 |
-	|				|landingTel	|String	|是			|降落场航站手机                                 |
-	|				|flightTime	|Int	|是			|预计飞行时长(min)                              |
+    | 字段名       | 属性 | 类型    | 是否必传 | 说明                       |
+    | ------------ | ---- | ------- | -------- | -------------------------- |
+    | requestId    |      | String  | 是       | 请求唯一标识               |
+    | success      |      | Boolean | 是       | true:成功 false:失败       |
+    | errorCode    |      | String  | 否       | 请求错误码                 |
+    | errorMessage |      | String  | 否       | 请求错误信息(不可承运原因) |
+    | date         |      | String  | 是       | 当前处理日期               |
+    | version      |      | String  | 否       | 当前版本信息               |
+    | obj          |      | T       | 否       | 业务结果类                 |
+    | gpsType      |      | Int     | 是       | 默认坐标系类型 1：WGS－84  |
+    | takeoffCode  |      | String  | 是       | 起飞场航站代码             |
+    | takeoffLon   |      | String  | 是       | 起飞场航站经度             |
+    | takeoffLat   |      | String  | 是       | 起飞场航站纬度             |
+    | takeoffName  |      | String  | 是       | 起飞场航站名称             |
+    | takeoffAddr  |      | String  | 是       | 起飞场航站地址             |
+    | takeoffTel   |      | String  | 是       | 起飞场航站手机             |
+    | landingCode  |      | String  | 是       | 降落场航站代码             |
+    | landingLon   |      | String  | 是       | 降落场航站经度             |
+    | landingLat   |      | String  | 是       | 降落场航站纬度             |
+    | landingName  |      | String  | 是       | 降落场航站名称             |
+    | landingAddr  |      | String  | 是       | 降落场航站地址             |
+    | landingTel   |      | String  | 是       | 降落场航站手机             |
+    | flightTime   |      | Int     | 是       | 预计飞行时长(min)          |
 
 		
 - 请求示例

@@ -16,25 +16,25 @@ category:
 - 请求方法：POST
 - 请求参数
 
-    |字段名			|属性	    |类型	|是否必传   |说明      |
-    |---------------|-----------|-------|-----------|----------|
-	|devCode		|			|String	|是			|企业账号  |
-	|fyCode		    |			|String	|是			|丰翼运单号|
+    | 字段名  | 属性 | 类型   | 是否必传 | 说明       |
+    | ------- | ---- | ------ | -------- | ---------- |
+    | devCode |      | String | 是       | 企业账号   |
+    | fyCode  |      | String | 是       | 丰翼运单号 |
                                                                                                                  
 	
 - 请求响应参数
 
-    |字段名	 		|属性	    |类型	|是否必传	|说明	                  |
-    |---------------|-----------|-------|-----------|-------------------------|
-	|requestId		|			|String	|是			|请求唯一标识             |
-	|success		|			|Boolean|是			|true:成功 false:失败     |
-	|errorCode		|			|String	|否			|请求错误码               |
-	|errorMessage	|			|String	|否			|请求错误信息             |
-	|date			|			|String	|是			|当前处理日期             |
-	|version		|			|String	|否			|当前版本信息             |
-	|obj			|			|Object	|否			|业务结果类               |
-	|			    | url		|String	|是			|H5地址                   |
-	|		        | fyCode	|String	|是			|丰翼编码                 |
+    | 字段名       | 属性 | 类型    | 是否必传 | 说明                 |
+    | ------------ | ---- | ------- | -------- | -------------------- |
+    | requestId    |      | String  | 是       | 请求唯一标识         |
+    | success      |      | Boolean | 是       | true:成功 false:失败 |
+    | errorCode    |      | String  | 否       | 请求错误码           |
+    | errorMessage |      | String  | 否       | 请求错误信息         |
+    | date         |      | String  | 是       | 当前处理日期         |
+    | version      |      | String  | 否       | 当前版本信息         |
+    | obj          |      | Object  | 否       | 业务结果类           |
+    | url          |      | String  | 是       | H5地址               |
+    | fyCode       |      | String  | 是       | 丰翼编码             |
 					
 
 - 请求示例

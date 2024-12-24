@@ -40,8 +40,8 @@ category:
     |date		   	| 			|String	|是			|当前处理日期                                   |
     |version		|			|String	|否			|当前版本信息                                   |
     |obj			|			|Object	|否			|业务结果类                                     |
-    |				|userId		|String	|是			|用户账号                                       |
-    |				|token		|String	|是			|用户token 有效期7天                            |
+    |userId				|		|String	|是			|用户账号                                       |
+    |token				|		|String	|是			|用户token 有效期7天                            |
 		
 - 请求示例
     ```json
