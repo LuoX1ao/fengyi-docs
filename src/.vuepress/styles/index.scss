@@ -36,11 +36,13 @@ th, td {
   border-right: none;
   border-left: none;
   transition: border-color var(--vp-t-color);
+  text-align: left;
 }
 
 th {
   font-weight: 600;
   color: #000;
+  min-width: 4rem;
 }
 
 table,tbody,thead {
