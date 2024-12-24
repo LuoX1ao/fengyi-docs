@@ -117,7 +117,7 @@ export default {
 .header .nav-bar a {
   margin-right: 116px;
   color: #383838;
-  font-size: .875rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;

@@ -71,13 +71,13 @@ const applications = reactive([
     active: true,
   },
   {
-    title: "医疗服务",
+    title: "文旅景区",
     desc: "针对景点游客定位困难、传统配送方式难以触达的问题,丰翼为浙江绍兴景区提供“无人机+接驳柜”餐饮配送方案。业务小程序通过接入无人机运力数据、飞行数据,实现消费者订单配送流程全透明化,提升配送效率及用户体验。",
     className: "application-wljq",
     active: false,
   },
   {
-    title: "医疗服务",
+    title: "运营服务",
     desc: "无人机运营服务商旨在提供无人机相关的各种服务,以满足不同行业和场景的应用需求。通过接入无人机资源数据、飞行数据,来了解无人机的状态、位置和周边基础设施情况,以支持无人机飞行任务规划、执行、监控,实现对无人机业务的全面管控。",
     className: "application-yyfw",
     active: false,

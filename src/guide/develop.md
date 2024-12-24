@@ -7,7 +7,7 @@ category:
 
 **订单流转流程图：**
 
-![](/assets/image/test.001.png "订单流转流程图")
+![](/assets/image/test.001.jpg "订单流转流程图")
 
 **状态说明：**
 
