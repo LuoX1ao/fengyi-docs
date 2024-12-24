@@ -10,12 +10,19 @@
 }
 
 .vp-sidebar-link.active {
-  background-color: transparent;
+  // background-color: transparent;
+}
+
+@font-face {
+
+  font-family: PingFang; /* 自定义字体名称 */
+  
+  src: url(/assets/fonts/PingFang/pingfangsc-regular.otf); /* 字体文件的路径 */
 }
 
 @media (min-width: 1440px) {
   body {
-    font-size: 1rem;
+    font-size: .875rem;
   }
 }
 

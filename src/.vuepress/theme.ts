@@ -55,22 +55,13 @@ export default hopeTheme(
         {
           text: "开发说明",
           // collapsible: true,
-          children: [
-            {
-              text: "开发说明",
-              link: "/guide/develop/",
-            },
-          ],
+          link: "/guide/develop",
+          
         },
         {
           text: "业务说明",
+          link: "/guide/business",
           // collapsible: true,
-          children: [
-            {
-              text: "订单流转",
-              link: "/guide/business/",
-            },
-          ],
         },
       ],
       // "/docs/": [

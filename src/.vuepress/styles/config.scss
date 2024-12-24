@@ -1,3 +1,7 @@
 // you can change config here
 $theme-color: #B91818;
-$content-width: 880px;
+
+:root {
+  --content-width: 800px;
+  --vp-font: "PingFang", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", STHeiti, "Microsoft YaHei", SimSun, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

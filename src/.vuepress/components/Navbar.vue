@@ -31,7 +31,7 @@ export default {
         },
         {
           name: "接入指引",
-          path: "/guide/develop/",
+          path: "/guide/develop",
           active: false,
         },
         {
@@ -99,7 +99,7 @@ export default {
   align-items: center;
 }
 .header .logo {
-  width: 180px;
+  width: 160px;
   height: 48px;
   background-image: url("/assets/image/home-logo.svg");
   background-size: 100%;
@@ -117,9 +117,9 @@ export default {
 .header .nav-bar a {
   margin-right: 116px;
   color: #383838;
-  font-size: 18px;
+  font-size: .875rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   cursor: pointer;
 }
