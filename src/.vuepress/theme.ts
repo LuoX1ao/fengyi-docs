@@ -114,7 +114,7 @@ export default hopeTheme(
           text: "资源管理",
           collapsible: true,
           children: [
-            // "/docs/resource/"
+            "/docs/resource/uav-device-info.md",
           ],
         },
       ]
