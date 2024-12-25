@@ -31,6 +31,10 @@ export default defineUserConfig({
     [
       'meta',
       { name: 'baidu-site-verification', content: 'codeva-SbbPxkqAZp'}
+    ],
+    [
+      'meta',
+      { name: 'keywords', content: '丰翼开放平台'}
     ]
   ],
 
