@@ -28,7 +28,7 @@ POST
 | date            |      | String  | 是       | 当前处理日期                                                                                                 |
 | version         |      | String  | 否       | 当前版本信息                                                                                                 |
 | obj             |      | T       | 否       | 业务结果类                                                                                                   |
-| fyCode          |      | String  | 是       | 丰翼编码                                                                                                     |
+| fyCode          |      | String  | 是       | 丰翼运单号                                                                                                     |
 | bizCode         |      | String  | 是       | 客户单号                                                                                                     |
 | uavId           |      | String  | 否       | 无人机编码                                                                                                   |
 | taskId          |      | String  | 否       | 此次任务ID                                                                                                   |
