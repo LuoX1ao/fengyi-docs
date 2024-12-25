@@ -7,7 +7,7 @@
 ### 接口地址
 
 POST
-/uocs-tes/waybill/api/orderH5View
+待发布
 
 ### 请求参数
 

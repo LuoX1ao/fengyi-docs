@@ -12,16 +12,16 @@ POST
 
 ### 请求参数
 
-| 字段名    | 属性 | 类型   | 是否必传 | 说明                                             |
-| --------- | ---- | ------ | -------- | ------------------------------------------------ |
-| appKey    |      | String | 是       | appKey （固定值 IE-UOCS-OUT）                    |
-| appSecret |      | String | 是       | appKey 秘钥 （固定值fykj12345678）               |
-| deviceId  |      | String | 是       | 设备ID                                           |
-| hostName  |      | String | 是       | 设备名                                           |
-| requestId |      | String | 否       | 请求ID                                           |
-| ip        |      | String | 是       | IP地址                                           |
-| userId    |      | String | 是       | 用户账号（丰翼分配 xcy0001）                     |
-| password  |      | String | 是       | 密码（丰翼分配79323c441a34b5599aec5c1f56eda196） |
+| 字段名    | 属性 | 类型   | 是否必传 | 说明                              |
+| --------- | ---- | ------ | -------- | ----------------------------------|
+| appKey    |      | String | 是       | appKey                            |
+| appSecret |      | String | 是       | appKey 秘钥 					   |
+| deviceId  |      | String | 是       | 设备ID                            |
+| hostName  |      | String | 是       | 设备名                            |
+| requestId |      | String | 否       | 请求ID                            |
+| ip        |      | String | 是       | IP地址                            |
+| userId    |      | String | 是       | 用户账号						   |
+| password  |      | String | 是       | 密码                              |
 
 ### 请求响应参数
 
@@ -48,8 +48,8 @@ POST
     "hostName": "SF0001304522C",
     "requestId": "123456789",
     "ip": "192.168.255.10",
-    "userId": "fc0001",
-    "password": "8bb2423a0e1c4d0a"
+    "ak": "fc0001",
+    "sk": "8bb2423a0e1c4d0a"
 }
 ```
 
@@ -65,7 +65,7 @@ POST
     "date":null,
     "version":null,
     "obj":{
-        "userId":"fc0001",
+        "ak":"fc0001",
         "token":"DEF_A3_537bc42380b6dafb5f480d9eaa4da0a91684302908599"
     }
 }

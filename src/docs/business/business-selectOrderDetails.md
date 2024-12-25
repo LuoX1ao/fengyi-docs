@@ -7,7 +7,7 @@
 ### 接口地址
 
 POST
-/uocs-tes/waybill/api/selectOrderDetails
+待发布
 
 ### 请求参数
 

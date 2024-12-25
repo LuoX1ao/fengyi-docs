@@ -10,7 +10,7 @@
 ### 接口地址
 
 GET
-/v1/aircrafts?uavId=uavId
+待公布
 
 
 ### 请求参数
