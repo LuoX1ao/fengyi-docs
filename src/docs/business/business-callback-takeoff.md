@@ -1,17 +1,4 @@
----
-index: true
-
-title: 起飞事件推送接口 (回调)  
-date: 2024-12-13
-description: 对接系统提供回调url,丰翼无人机起飞事件推送回调系统
-author: 江建莉
-
-# tags:
-#     - tag1
-#     - tag2
-category:
-  - 业务管理
----
+# 起飞事件推送接口 (回调)  
 
 ### 接口说明
 
