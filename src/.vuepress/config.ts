@@ -28,6 +28,10 @@ export default defineUserConfig({
       'link',
       { rel: 'shortcut icon', href: '/logo.svg' }
     ],
+    [
+      'meta',
+      { name: 'baidu-site-verification', content: 'codeva-SbbPxkqAZp'}
+    ]
   ],
 
   theme,
