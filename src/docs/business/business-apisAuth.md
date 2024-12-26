@@ -48,8 +48,8 @@ POST
     "hostName": "SF0001304522C",
     "requestId": "123456789",
     "ip": "192.168.255.10",
-    "ak": "fc0001",
-    "sk": "8bb2423a0e1c4d0a"
+    "userId": "fc0001",
+    "password": "8bb2423a0e1c4d0a"
 }
 ```
 

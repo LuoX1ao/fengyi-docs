@@ -17,8 +17,8 @@ POST
 | gpsType     |      | Int    | 是       | 默认坐标系类型 1：WGS－84 |
 | senderLon   |      | String | 是       | 寄件人地址经度            |
 | senderLat   |      | String | 是       | 寄件人地址纬度            |
-| goodsType   |      | Int    | 是       | 货物类型 默认传 10快递    |
-| goodsWeight |      | Int    | 是       | 货物重量(g) 默认传 2000   |
+| goodsType   |      | Int    | 是       | 货物类型 	             |
+| goodsWeight |      | Int    | 是       | 货物重量(g) 			     |
 | receiverLon |      | String | 是       | 收件人地址经度            |
 | receiverLat |      | String | 是       | 收件人地址纬度            |
 

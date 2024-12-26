@@ -15,8 +15,8 @@ POST
 | ------------ | ---- | ------ | -------- | --------------------------------------- |
 | devCode      |      | String | 是       | 企业账号                                |
 | pushTime     |      | String | 是       | 推单时间 2024-10-21 17:00:00            |
-| useCab       |      | Int    | 是       | 是否使用接驳柜寄件 1：否；2：是  默认:1 |
-| boxCode      |      | String | 否       | 接驳柜编码 useCab为2 必填               |
+| useCab       |      | Int    | 是       | 是否使用接驳柜寄件 1：否；2：是  	    |
+| boxCode      |      | String | 否       | 接驳柜编码 useCab为2时必填				|
 | bizCode      |      | String | 是       | 客户单号                                |
 | gpsType      |      | Int    | 是       | 默认坐标系 1：WGS－84                   |
 | senderCode   |      | String | 是       | 寄件人航站编码                          |
@@ -25,8 +25,8 @@ POST
 | senderAddr   |      | String | 是       | 寄件人详细地址                          |
 | senderTel    |      | String | 是       | 寄件人电话                              |
 | senderName   |      | String | 是       | 寄件人姓名                              |
-| goodsType    |      | Int    | 是       | 货物类型 默认传 10快递                  |
-| goodsWeight  |      | Int    | 是       | 货物重量(g) 默认传 2000                 |
+| goodsType    |      | Int    | 是       | 货物类型 			                    |
+| goodsWeight  |      | Int    | 是       | 货物重量(g)                             |
 | receiverCode |      | String | 是       | 收件人航站编码                          |
 | receiverLon  |      | String | 是       | 收件人地址经度                          |
 | receiverLat  |      | String | 是       | 收件人地址纬度                          |
@@ -77,6 +77,9 @@ POST
 |65		|核酸      |
 |99		|其他      |
 |90		|血液品    |
+  > **提示**
+  >无法确定时传默认值10
+
 
 
 
