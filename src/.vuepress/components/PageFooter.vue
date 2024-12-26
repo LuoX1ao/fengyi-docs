@@ -3,10 +3,10 @@
     <div class="divider"></div>
     <div class="footer-legal">
       <div class="footer-contact-us">
-        <span class="mr-10 title" >联系我们</span><span class="val" >fydev@sf-express.com</span>
+        <p class="mr-10 title" >联系我们</p><span class="val" >fydev@sf-express.com</span>
       </div>
       <div class="footer-legal-link">
-        <span class="mr-10 title">友情链接</span><a href="https://fyuav.cn/" target="_blank" class="val">丰翼科技官网</a>
+        <p class="mr-10 title">友情链接</p><a href="https://fyuav.cn/" target="_blank" class="val">丰翼科技官网</a>
       </div>
       <div class="footer-copyright">Copyright © 2023 丰翼科技 版权所有</div>
     </div>
