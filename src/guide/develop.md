@@ -18,13 +18,13 @@
   签名放请求头中，属性如下
   | 属性           | 错误信息                       |
   | -------------- | ------------------------------ |
-  |X-DJI-Timestamp | 随机时间戳                     |
-  |X-DJI-Nonce     | UUID随机数                     |
+  |X-FY-Timestamp | 随机时间戳                      |
+  |X-FY-Nonce     | UUID随机数                      |
   |Method          | 使用方法GET、POST、PUT         |
-  |X-DJI-Signature | 生成的签名值			        |
+  |X-FY-Signature | 生成的签名值			        |
   
   签名算法
-  HmacSHA256("userId+Method+X-DJI-Timestamp+X-DJI-Nonce",password)
+  HmacSHA256("userId+Method+X-FY-Timestamp+X-FY-Nonce",password)
   
   > **提示**
   > userId:   分配给第三方的ak
