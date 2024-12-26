@@ -65,6 +65,7 @@
 }
 
 .footer-legal .title {
+  margin: 0 0 12px;
   color: rgba(0,0,0,.85);
   font-weight: 600;
 }
