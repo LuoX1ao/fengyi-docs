@@ -331,6 +331,7 @@ export default hopeTheme(
       //   },
       // },
     },
+    displayFooter: true,
   },
   { custom: true }
 );

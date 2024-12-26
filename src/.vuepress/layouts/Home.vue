@@ -6,6 +6,14 @@
       <Content />
     </main>
     <!-- <footer>My Custom Footer</footer> -->
+    <PageFooter
+      style="
+        padding-inline-end: 0;
+        padding-inline-start: 0;
+        margin: 0 auto;
+        max-width: 1200px;
+      "
+    />
   </div>
 </template>
 
@@ -72,6 +80,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

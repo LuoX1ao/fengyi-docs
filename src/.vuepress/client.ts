@@ -2,6 +2,7 @@ import { defineClientConfig } from 'vuepress/client'
 import homeLayout from './layouts/Home.vue'
 import Home from './components/Home.vue'
 import Navbar from './components/Navbar.vue'
+import PageFooter from './components/PageFooter.vue'
 
 export default defineClientConfig({
   layouts: {
@@ -10,6 +11,7 @@ export default defineClientConfig({
   enhance: ({ app, router, siteData }) => {
     app.component("Navbar", Navbar);
     app.component("Home", Home);
+    app.component("PageFooter", PageFooter)
 
     router.beforeEach((to, from, next) => {
       if (typeof window === 'object') {
