@@ -44,38 +44,22 @@ POST
 ### 请求示例
 ```json
 {
-    "timestamp": 1718934400000,
-    "area": "广东深圳宝安区",
-    "createTm": "2024-12-18 08:00:00",
-    "flightCode": "CA1234",
-    "uas": "UAS80000001",
-    "uasType": "ARK40",
-    "takeoffPoint": "XXX起飞位",
-    "takeoff_lon": "116.12345",
-    "takeoff_lat": "39.12345",
-    "takeoff_alt": 100.5,
-    "landPoint": "XXX降落位",
-    "land_lon": "116.56789",
-    "land_lat": "39.56789",
-    "land_alt": 90.5,
-    "routeCode": "R001",
-    "wayPointList": [{
-        "seq":0,
-        "cruise_lon": "116.23456",
-        "cruise_lat": "39.23456",
-        "cruise_alt": 110.5
-    }, {
-        "seq":1,
-        "cruise_lon": "116.34567",
-        "cruise_lat": "39.34567",
-        "cruise_alt": 115.5
-    }],
-    "flightStatus": 1,
-    "planFlyTime": "8.6",
-    "planFlyDist": 15.8,
-    "realTakeoffTime": "2024-12-18 08:30:00",
-    "realLandTime": "2024-12-18 10:30:00",
-    "factFlyR": 20.5
+    "orderID": "ZTU25VA2204FSUHXT-20240204-17070329",
+    "sn": "ZTU25VA2204FSUHXT",
+    "flightStatus": "land",
+    "manufacturerID": "91310106575864243X",
+    "uasID": "xxxxxxx",
+    "timeStamp": "20240124095001",
+    "uasModel": "ZT-25",
+    "coordinate": 1,
+    "longitude": 1154458272,
+    "latitude": 401929176,
+    "heightType": 1,
+    "height": 130,
+    "altitude": 130,
+    "VS": 30,
+    "GS": 118,
+    "course": 680
 }
 ```
 
