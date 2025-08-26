@@ -1,8 +1,9 @@
-# 创建运单的接口
+
+# 创建无人机运单
 
 ### 接口说明
 
-在查询到丰翼无人机有承运运力之后，通过该接口向丰翼无人机下订单
+当对接方接收到订单时，可通过此接口创建无人机物流运单
 
 ### 接口地址
 
@@ -13,11 +14,11 @@ POST
 
 | 字段名       | 属性 | 类型   | 是否必传 | 说明                                    |
 | ------------ | ---- | ------ | -------- | --------------------------------------- |
-| devCode      |      | String | 是       | 企业账号                                |
+| devCode      |      | String | 是       | 开发者账号                           |
 | pushTime     |      | String | 是       | 推单时间 2024-10-21 17:00:00            |
 | useCab       |      | Int    | 是       | 是否使用接驳柜寄件 1：否；2：是  	    |
 | boxCode      |      | String | 否       | 接驳柜编码 useCab为2时必填				|
-| bizCode      |      | String | 是       | 客户单号                                |
+| bizCode      |      | String | 是       | 客户订单号                                |
 | gpsType      |      | Int    | 是       | 默认坐标系 1：WGS－84                   |
 | senderCode   |      | String | 是       | 寄件人航站编码                          |
 | senderLon    |      | String | 是       | 寄件人地址经度                          |
@@ -37,7 +38,7 @@ POST
 | goodsCode    |      | String | 否       | 货物编码 多个，隔开                     |
 | remark       |      | String | 否       | 备注                                    |
 
-货物类型枚举值
+货物类型枚举值（无法确定时传默认值10）
 | 代码  | 代码值   |
 | ----- | ---------|
 |1		|快餐      |
@@ -77,13 +78,12 @@ POST
 |65		|核酸      |
 |99		|其他      |
 |90		|血液品    |
-  > **提示**
-  >无法确定时传默认值10
 
 
 
 
-	
+
+​	
 ### 请求响应参数
 
 | 字段名       | 属性     | 类型    | 是否必传 | 说明                       |
@@ -91,14 +91,14 @@ POST
 | requestId    |          | String  | 是       | 请求唯一标识               |
 | success      |          | Boolean | 是       | true:成功 false:失败       |
 | errorCode    |          | String  | 否       | 请求错误码                 |
-| errorMessage |          | String  | 否       | 请求错误信息(不可承运原因) |
+| errorMessage |          | String  | 否       | 请求错误信息（不可承运原因）|
 | date         |          | String  | 是       | 当前处理日期               |
 | version      |          | String  | 否       | 当前版本信息               |
 | obj          |          | T       | 否       | 业务结果类                 |
-|              | fyCode   | String  | 是       | 丰翼编号                   |
-|              | sendCode | String  | 是       | 寄件码(起飞场为丰巢柜时    |
+|              | fyCode   | String  | 是       | 丰翼运单号                   |
+|              | sendCode | String  | 是       | 寄件码（起飞场为接驳柜时）    |
 
-		
+
 ### 请求示例
 
 ```json

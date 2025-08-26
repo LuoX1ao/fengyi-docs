@@ -95,6 +95,7 @@ export default hopeTheme(
             "/docs/business/business-apisAuth.md",
             "/docs/business/business-carrierWaybill.md",
             "/docs/business/business-createWaybill.md",
+            "/docs/business/business-cancelWaybill.md",
             "/docs/business/business-selectOrderDetails.md",
             "/docs/business/business-h5-orderH5View.md",
             "/docs/business/business-callback-waybillstatus.md",

@@ -1,8 +1,9 @@
-# 查询运力是否可用接口
+
+# 查询无人机运力接口
 
 ### 接口说明
 
-查询丰翼在该地区范围内是否有无人机承运运力
+并非真正下发运单；可用来验证是否可以下发运单，如地址是否在丰翼无人机配送范围内，并在成功时返回起降航站信息
 
 ### 接口地址
 
@@ -13,7 +14,7 @@ POST
 
 | 字段名      | 属性 | 类型   | 是否必传 | 说明                      |
 | ----------- | ---- | ------ | -------- | ------------------------- |
-| devCode     |      | String | 是       | 企业账号                  |
+| devCode     |      | String | 是       | 开发者账号             |
 | gpsType     |      | Int    | 是       | 默认坐标系类型 1：WGS－84 |
 | senderLon   |      | String | 是       | 寄件人地址经度            |
 | senderLat   |      | String | 是       | 寄件人地址纬度            |
@@ -22,7 +23,7 @@ POST
 | receiverLon |      | String | 是       | 收件人地址经度            |
 | receiverLat |      | String | 是       | 收件人地址纬度            |
 
-	
+
 ### 请求响应参数
 
 | 字段名       | 属性        | 类型    | 是否必传 | 说明                       |
@@ -40,16 +41,16 @@ POST
 |              | takeoffLat  | String  | 是       | 起飞场航站纬度             |
 |              | takeoffName | String  | 是       | 起飞场航站名称             |
 |              | takeoffAddr | String  | 是       | 起飞场航站地址             |
-|              | takeoffTel  | String  | 是       | 起飞场航站手机             |
+|              | takeoffTel  | String  | 是       | 起飞场航站负责人手机号             |
 |              | landingCode | String  | 是       | 降落场航站代码             |
 |              | landingLon  | String  | 是       | 降落场航站经度             |
 |              | landingLat  | String  | 是       | 降落场航站纬度             |
 |              | landingName | String  | 是       | 降落场航站名称             |
 |              | landingAddr | String  | 是       | 降落场航站地址             |
-|              | landingTel  | String  | 是       | 降落场航站手机             |
+|              | landingTel  | String  | 是       | 降落场航站负责人手机号             |
 |              | flightTime  | Int     | 是       | 预计飞行时长(min)          |
 
-		
+
 ### 请求示例
 
 ```json
