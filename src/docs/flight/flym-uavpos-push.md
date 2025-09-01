@@ -45,8 +45,8 @@ POST
 
 | 字段名   | 属性 | 类型    | 是否必传 | 说明                      |
 | -------- | ---- | ------- | -------- | ------------------------- |
-| code     |      | String  | 是       | 请求错误码 0:成功 非0:失败 |
-| errorMsg |      | Boolean | 是       | 请求错误信息              |
+| code     |      | Integer  | 是       | 请求错误码 0:成功 非0:失败 |
+| errorMsg |      | String  | 是       | 请求错误信息              |
 
 
 ​					
@@ -72,17 +72,11 @@ POST
 }
 ```
 
-### 响应示例
+### 响应示例(成功code一定要是0)
 
 ```json
 {
-    "requestId":"xxxxxxx",
-    "success":true,
-    "errorCode":null,
-    "date":"2022-09-27 10:04:43",
-    "timestamp":1664244283963,
-    "version":"1.0",
-    "errorMessage":null,
-    "obj":null      
+    "code":0,
+    "errorMsg":null
 }
 ```

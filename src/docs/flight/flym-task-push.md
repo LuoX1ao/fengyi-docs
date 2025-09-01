@@ -45,15 +45,10 @@
 
 ### 请求响应参数
 
-| 字段名       | 属性 | 类型    | 是否必传 | 说明                 |
-| ------------ | ---- | ------- | -------- | -------------------- |
-| requestId    |      | String  | 是       | 请求唯一标识         |
-| success      |      | Boolean | 是       | true:成功 false:失败 |
-| errorCode    |      | String  | 否       | 请求错误码           |
-| errorMessage |      | String  | 否       | 请求错误信息         |
-| date         |      | String  | 是       | 当前处理日期         |
-| version      |      | String  | 否       | 当前版本信息         |
-| obj          |      | Object  | 否       | 业务结果类           |
+| 字段名   | 属性 | 类型    | 是否必传 | 说明                      |
+| -------- | ---- | ------- | -------- | ------------------------- |
+| code     |      | Integer | 是       | 请求错误码 0:成功 非0:失败 |
+| errorMsg |      | String  | 是       | 请求错误信息              |
 
 ​					
 
@@ -82,12 +77,11 @@
 }
 ```
 
-### 响应示例(成功code一定要是200)
+### 响应示例(成功code一定要是0)
 
 ```json
 {
-	"code":"200",
-	"errorMessage":null,
-	"obj":null      
+    "code":0,
+    "errorMsg":null
 }
 ```
