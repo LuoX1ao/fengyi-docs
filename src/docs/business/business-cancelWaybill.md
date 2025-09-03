@@ -15,6 +15,7 @@ POST
 | ------- | ---- | ------ | -------- | ---------- |
 | devCode |      | String | 是       | 开发者账号 |
 | fyCode  |      | String | 是       | 丰翼运单号 |
+| reason  |      | String | 否       | 取消原因   |
 
 
 ### 请求响应参数
@@ -33,8 +34,9 @@ POST
 
 ```json
 {
-	"devCode": "tc123456",
-	"fyCode": "FC001"
+ "devCode": "tc123456",
+ "fyCode": "FC001",
+ "reason": "取消原因"
 }
 ```
 
