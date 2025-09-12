@@ -15,14 +15,14 @@ POST
 
 | 字段名    | 属性 | 类型   | 是否必传 | 说明                              |
 | --------- | ---- | ------ | -------- | ----------------------------------|
-| appKey    |      | String | 是       | appKey                            |
-| appSecret |      | String | 是       | appKey 秘钥 					   |
+| appKey    |      | String | 是       | appKey（丰翼提供）                           |
+| appSecret |      | String | 是       | appKey 秘钥（丰翼提供） 					   |
 | deviceId  |      | String | 是       | 设备ID                            |
 | hostName  |      | String | 是       | 设备名                            |
 | requestId |      | String | 否       | 请求ID                            |
 | ip        |      | String | 是       | IP地址                            |
-| userId    |      | String | 是       | 用户账号						   |
-| password  |      | String | 是       | 密码                              |
+| userId    |      | String | 是       | 用户账号（丰翼提供）						   |
+| password  |      | String | 是       | 密码（丰翼提供）                              |
 
 ### 请求响应参数
 
