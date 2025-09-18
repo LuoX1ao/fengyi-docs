@@ -37,11 +37,11 @@
 | routeCode           |      | String | 是       | 航线编码，例：GZC01R40FL001                                  |
 | flightStatus        |      | String | 是       | 航班当前状态：0-待起飞，1-航线飞行中，2-备降中，3-返航中，4-紧急迫降，5-任务结束 |
 | planFlyTime         |      | Double | 否       | 计划飞行时长，单位min，保留1位小数。例：3.1                  |
-| planFlyDist         |      | Double | 否       | 计划飞行距离，单位km，保留1位小数。例：8.5                   |
+| planFlyDist         |      | Double | 否       | 计划飞行距离，单位km。例：8.53                  |
 | realTakeoffTime     |      | String | 否       | 实际起飞时间，格式"yyyyMMddHHmmss"，例：2024012409500        |
 | eArrivalTime        |      | String | 否       | 预计到达时间，格式"yyyyMMddHHmmss"，例：202401240950(仅ARK40机型支持) |
 | realLandTime        |      | String | 否       | 实际降落时间，格式"yyyyMMddHHmmss"，例：202401240950         |
-| factFlyR            |      | Double | 否       | 实际飞行距离，单位km，保留1位小数。例：8.5                   |
+| factFlyR            |      | Double | 否       | 实际飞行距离，单位km。例：8.53                   |
 
 ### 请求响应参数
 
@@ -55,25 +55,26 @@
 ### 请求示例
 ```json
 {
-	"timestamp": 2024012409500,
-	"area": "广东深圳宝安区",
-	"createTm": 2024012409500,
-	"flightCode": "CN010010R03K2411120004",
-	"comNum": "3005",
-	"uasType": "ARK40",
-	"takeoffTerminalCode": "CNB030259",
-	"takeoffPointCode": "CNA250819-BA001",
-	"takeoffPointName": "测试起飞场",
-	"landTerminalCode": "CNB030259",
-	"landPointCode": "CNA250819-BA001",
-	"landPointName": "测试降落场",
-	"routeCode": "R001",
-	"flightStatus": 1,
-	"planFlyTime": 8.6,
-	"planFlyDist": 15.8,
-	"realTakeoffTime": 2024012409500,
-	"realLandTime": 2024012409500,
-	"factFlyR": 20.5
+    "area": "广东省深圳市",
+    "routeCode": "CN010007R00WL003",
+    "takeoffPointCode": "CN110075-QA003",
+    "uavType": "AMOS-ARK80",
+    "factFlyR": 4.104,
+    "flightCode": "CN010007R00W2509180004",
+    "landPointCode": "CN110075-QA004",
+    "flightStatus": 5,
+    "takeoffPointName": "ARK80-3D深圳点A",
+    "realLandTime": "20250918145324",
+    "takeoffTerminalCode": "CN110075",
+    "landPointName": "ARK80-3D深圳点B",
+    "eArrivalTime": "20250918144834",
+    "landTerminalCode": "CN110075",
+    "planFlyDist": 3.83,
+    "createTm": "20250918144738",
+    "realTakeoffTime": "20250918144826",
+    "comNum": 55555,
+    "planFlyTime": 5.0,
+    "timestamp": "20250918145327"
 }
 ```
 

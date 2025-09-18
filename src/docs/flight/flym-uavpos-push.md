@@ -31,9 +31,9 @@ POST
 | altitude       |      | Integer | 是       | 海拔高度：MSL：海拔高度/平均海拔，单位：米（m）精确到小数点后1位，乘10以后传输 |
 | VS             |      | Integer | 是       | 垂直飞行速度值：单位：米每秒（m/s）精确到小数点后1位，乘10后传输 |
 | GS             |      | Integer | 是       | 水平飞行速度值：单位：米每秒（m/s）精确到小数点后1位，乘10后传输 |
-| course         |      | Integer | 是       | 航迹角：无人驾驶航空器当前时刻所在位置真北方向顺时针量至地速方向的夹角，范围（0度，360度］，暂不具备航迹角测算能力的型号产品，精确到小数点后1位，乘10后传输 |
-| roll           |      | Integer | 是       | 滚转角：范围（0度，360度］，精确到小数点后1位，乘10后传输    |
-| pitch          |      | Integer | 是       | 俯仰角：范围（0度，360度］，精确到小数点后1位，乘10后传输    |
+| course         |      | Integer | 是       | 航迹角：无人驾驶航空器当前时刻所在位置真北方向顺时针量至地速方向的夹角，范围[0度，360度］，暂不具备航迹角测算能力的型号产品，精确到小数点后1位，乘10后传输 |
+| roll           |      | Integer | 是       | 滚转角：范围[0度，360度］，精确到小数点后1位，乘10后传输    |
+| pitch          |      | Integer | 是       | 俯仰角：范围[0度，360度］，精确到小数点后1位，乘10后传输    |
 | RM             |      | Integer | 是       | 电池电量：单位mA.h，正整数传输，若无电量数据则不传（如使用非智能电池）1A.h=1000 mA.h |
 | SOC            |      | Integer | 否       | 电池电量百分比：最大为100代表100%，若无电量数据则不输（如使用非智能电池） |
 | voltage        |      | Integer | 否       | 电池电压：单位mV，正整数传输，若无电压数据则不传（如未采集BMS电压值）1V=1000mV |
@@ -53,22 +53,31 @@ POST
 ### 请求示例
 ```json
 {
-    "orderID": "ZTU25VA2204FSUHXT-20240204-17070329",
-    "sn": "ZTU25VA2204FSUHXT",
-    "flightStatus": "land",
-    "manufacturerID": "91310106575864243X",
-    "uasID": "xxxxxxx",
-    "timeStamp": "20240124095001",
-    "uasModel": "ZT-25",
+  "orderID": "MR5000000000020023-20230524-68535630",
+    "altitude": 1199,
     "coordinate": 1,
-    "longitude": 1154458272,
-    "latitude": 401929176,
-    "heightType": 1,
-    "height": 130,
-    "altitude": 130,
-    "VS": 30,
-    "GS": 118,
-    "course": 680
+    "flightCode": "FLY230524000009",
+    "SOC": 97,
+    "latitude": 260598750,
+    "manufacturerID": "91360782MA36YQXUXJ",
+    "roll": 3580,
+    "flightStatus": "Inflight",
+    "naviMode": "POS",
+    "GS": 299,
+    "voltage": 58710,
+    "timeStamp": 20250918144837,
+    "current": 8599,
+    "uasModel": "FZ90",
+    "course": 3542,
+    "sn": "MR5000000000020023",
+    "pitch": 34,
+    "RM": 117000,
+    "uasID": "UAS00002002",
+    "VS": 4,
+    "longitude": 1146765230,
+    "height": 600,
+    "windSpeed": 80.0,
+    "windDirect": 240.0
 }
 ```
 
