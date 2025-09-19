@@ -22,9 +22,9 @@
 
 | 字段名              | 属性 | 类型   | 是否必传 | 说明                                                         |
 | ------------------- | ---- | ------ | -------- | ------------------------------------------------------------ |
-| timestamp           |      | Long   | 是       | 当前时间，格式"yyyyMMddHHmmss"，例：2024012409500            |
+| timestamp           |      | Long   | 是       | 当前时间，格式"yyyyMMddHHmmss"，例：20240124095000            |
 | area                |      | String | 否       | 运行城市，例： 广东省东莞市                                  |
-| createTm            |      | String | 是       | 任务开始时间，格式"yyyyMMddHHmmss"，例：2024012409500        |
+| createTm            |      | String | 是       | 任务开始时间，格式"yyyyMMddHHmmss"，例：20240124095000        |
 | flightCode          |      | String | 是       | 航班号，例：CN010010R03K2411120004                           |
 | comNum              |      | String | 是       | 无人机编号，无人机唯一标识，例：8325                        |
 | uasType             |      | String | 是       | 机型，例：ARK40                      |
@@ -38,9 +38,9 @@
 | flightStatus        |      | String | 是       | 航班当前状态：0-待起飞，1-航线飞行中，2-备降中，3-返航中，4-紧急迫降，5-任务结束 |
 | planFlyTime         |      | Double | 否       | 计划飞行时长，单位min，保留1位小数。例：3.1                  |
 | planFlyDist         |      | Double | 否       | 计划飞行距离，单位km。例：8.53                  |
-| realTakeoffTime     |      | String | 否       | 实际起飞时间，格式"yyyyMMddHHmmss"，例：2024012409500        |
-| eArrivalTime        |      | String | 否       | 预计到达时间，格式"yyyyMMddHHmmss"，例：202401240950(仅ARK40机型支持) |
-| realLandTime        |      | String | 否       | 实际降落时间，格式"yyyyMMddHHmmss"，例：202401240950         |
+| realTakeoffTime     |      | String | 否       | 实际起飞时间，格式"yyyyMMddHHmmss"，例：20240124095000        |
+| eArrivalTime        |      | String | 否       | 预计到达时间，格式"yyyyMMddHHmmss"，例：20240124095000(仅ARK40机型支持) |
+| realLandTime        |      | String | 否       | 实际降落时间，格式"yyyyMMddHHmmss"，例：20240124095000         |
 | factFlyR            |      | Double | 否       | 实际飞行距离，单位km。例：8.53                   |
 
 ### 请求响应参数
