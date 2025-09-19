@@ -52,6 +52,6 @@ POST
 	"params": null,
 	"date": "2022-11-23 16:32:58",
 	"version": "1.0",
-	"obj":null
+	"obj":1
 }
 ```
