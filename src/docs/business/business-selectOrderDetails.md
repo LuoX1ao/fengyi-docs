@@ -8,7 +8,7 @@
 ### 接口地址
 
 POST
-待发布
+uocs-ces/openApi/selectWaybillDetails
 
 ### 请求参数
 

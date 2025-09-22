@@ -7,7 +7,7 @@
 ### 接口地址
 
 POST
-待发布
+uocs-ces/openApi/cancelWaybill
 
 ### 请求参数
 

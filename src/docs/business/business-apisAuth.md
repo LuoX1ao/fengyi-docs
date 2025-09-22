@@ -9,7 +9,7 @@
 ### 接口地址
 
 POST
-/apis-auth/login/auth
+apis-auth/login/auth
 
 ### 请求参数
 
