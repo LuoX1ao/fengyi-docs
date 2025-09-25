@@ -22,7 +22,7 @@ POST
 | naviMode       |      | String  | 是       | 导航模式：位置模式；RTK模式；视觉模式；导航未收敛            |
 | manufacturerID |      | String  | 是       | 统一社会信用代码：生产厂商的统一社会信用代码                 |
 | uasID          |      | String  | 是       | 无人驾驶航空器实名登记号：若无登记号，推送默认值 “UAS-DEFAULT" |
-| timeStamp      |      | String  | 是       | 当前时间：格式"yyyyMMddHHmmss"，例：20240124095000            |
+| timeStamp      |      | Long  | 是       | 当前时间：格式"yyyyMMddHHmmss"，例：20240124095000            |
 | uasModel       |      | String  | 是       | 产品型号：字母、数字与符号的组合，如“ARK40”                  |
 | coordinate     |      | Integer | 是       | 坐标系类型：1：WGS-84，GPS全球定位系统通常采用该坐标系; 2：CGCS2000，北斗卫星导航定位系统通常采用该坐标系; 3：GLONASS-PZ90，俄罗斯GLONASS卫星导航定位系统采用该坐标系 默认传1 |
 | longitude      |      | Long    | 是       | 经度：单位：度（°）精确到小数点后7位，乘10的7次方后传输      |
@@ -76,8 +76,8 @@ POST
     "VS": 4,
     "longitude": 1146765230,
     "height": 600,
-    "windSpeed": 80.0,
-    "windDirect": 240.0
+    "windSpeed": 80,
+    "windDirect": 240
 }
 ```
 

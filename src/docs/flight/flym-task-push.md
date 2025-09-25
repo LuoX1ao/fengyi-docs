@@ -62,7 +62,7 @@
     "factFlyR": 4.104,
     "flightCode": "CN010007R00W2509180004",
     "landPointCode": "CN110075-QA004",
-    "flightStatus": 5,
+    "flightStatus": "5",
     "takeoffPointName": "ARK80-3D深圳点A",
     "realLandTime": "20250918145324",
     "takeoffTerminalCode": "CN110075",
@@ -72,9 +72,9 @@
     "planFlyDist": 3.83,
     "createTm": "20250918144738",
     "realTakeoffTime": "20250918144826",
-    "comNum": 55555,
+    "comNum": "55555",
     "planFlyTime": 5.0,
-    "timestamp": "20250918145327"
+    "timestamp": 20250918145327
 }
 ```
 
