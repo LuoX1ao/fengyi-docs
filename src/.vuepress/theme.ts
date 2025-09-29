@@ -112,13 +112,13 @@ export default hopeTheme(
             "/docs/flight/flym-uavpos-push.md",
           ],
         },
-        {
-          text: "资源管理",
-          collapsible: true,
-          children: [
-            "/docs/resource/uav-device-info.md",
-          ],
-        },
+        // {
+        //   text: "资源管理",
+        //   collapsible: true,
+        //   children: [
+        //     "/docs/resource/uav-device-info.md",
+        //   ],
+        // },
       ]
 
 
