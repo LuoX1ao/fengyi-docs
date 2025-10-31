@@ -27,7 +27,7 @@
 | createTm            |      | String | 是       | 任务开始时间，格式"yyyyMMddHHmmss"，例：20240124095000        |
 | flightCode          |      | String | 是       | 航班号，例：CN010010R03K2411120004                           |
 | comNum              |      | String | 是       | 无人机编号，无人机唯一标识，例：8325                        |
-| uasType             |      | String | 是       | 机型，例：ARK40                      |
+| uavType             |      | String | 是       | 机型，例：ARK40                      |
 | takeoffTerminalCode |      | String | 是       | 起飞航站编号，例：CNB030259                                  |
 | takeoffPointCode    |      | String | 是       | 起飞场编号，例：CNA250819-BA001                              |
 | takeoffPointName    |      | String | 是       | 起飞场名称，例：松山湖可靠性测试起飞场                       |
