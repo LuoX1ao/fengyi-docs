@@ -1,10 +1,6 @@
 # 开发说明
 
 
-## 开发流程
-
-![](https://ie-uocs-core-shenzhen-futian1-oss.sf-express.com/v1.2/AUTH_IE-UOCS-CORE/sfosspublic001/test/dev_process.png)
-
 ## 对接环境
 测试环境地址：http://ie-uocs-out.sit.sf-express.com:8000/
 生产环境地址：https://ie-uocs-lvs.sf-express.com/
