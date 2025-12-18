@@ -36,8 +36,8 @@ POST
     "fyCode": "FY00001",
     "uavId": "3012",
     "taskId": "211",
-    "takeoffCode": "CN001",
-    "takeoffTime": "2024-10-08 14:07:11"
+    "landingCode": "CN001",
+    "landingTime": "2024-10-08 14:07:11"
 }
 ```
 
