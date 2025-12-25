@@ -17,7 +17,7 @@ POST
 |fyCode			|			|String	|否			|丰翼运单号        |
 |uavId			|			|String	|是			|无人机编码      |
 |taskId			|			|String	|是			|此次任务ID      |
-|takeoffCode	|			|String	|是			|起飞航站编码    |
+|takeoffCode	|			|String	|否			|起飞航站编码    |
 |takeoffTime	|			|String	|是			|起飞时间        |
 
 	
