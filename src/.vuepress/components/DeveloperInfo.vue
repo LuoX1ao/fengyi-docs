@@ -1,6 +1,6 @@
 <template>
   <div class="developer-info">
-    <div class="apply-bar">
+    <div v-if="isLoaded" class="apply-bar">
       <el-button type="primary" @click="handleApplyTestClick" :class="{'has-test': hasTestDeveloper}">申请测试开发者ID</el-button>
       <el-button v-if="hasTestDeveloper" type="primary" @click="handleApplyProdClick">申请生产开发者ID</el-button>
     </div>
@@ -87,31 +87,41 @@ export default {
   },
   methods: {
     handleApplyTestClick() {
+      if (this.hasTestDeveloper) {
+        ElMessage.error('最多只能申请1个测试开发者ID')
+        return
+      }
       this.router.push({ path: '/developer/developer-info/apply-test'})
     },
     handleApplyProdClick() {
       this.router.push({ path: '/developer/developer-info/apply-prod'})
     },
     async getDeveloperList() {
-      this.tableData = []
-      const userStore = useUserStore()
-      const resTest = await api.getDeveloperList({
-        userName: userStore.userInfo?.userName,
-        pageNum: 1,
-        pageSize: 99999,
-      }, 'test')
-      if (resTest.success) {
-        this.hasTestDeveloper = resTest.obj?.length > 0
-        this.tableData.push(...resTest.obj.map(item => ({ ...item, category: '测试', type: 'test' })) || [])
-      }
-      const resProd = await api.getDeveloperList({  
-        userName: userStore.userInfo?.userName,
-        pageNum: 1,
-        pageSize: 99999,
-      }, 'prod')
-      if (resProd.success) {
-        this.tableData.push(...resProd.obj.map(item => ({ ...item, category: '生产', type: 'prod' })) || [])
-      }
+      try {
+        const userStore = useUserStore()
+        const resTest = await api.getDeveloperList({
+          userName: userStore.userInfo?.userName,
+          pageNum: 1,
+          pageSize: 99999,
+        }, 'test')
+        if (resTest.success) {
+          this.hasTestDeveloper = resTest.obj?.length > 0
+          this.tableData.push(...resTest.obj.map(item => ({ ...item, category: '测试', type: 'test' })) || [])
+        }
+        const resProd = await api.getDeveloperList({  
+          userName: userStore.userInfo?.userName,
+          pageNum: 1,
+          pageSize: 99999,
+        }, 'prod')
+        if (resProd.success) {
+          this.tableData.push(...resProd.obj.map(item => ({ ...item, category: '生产', type: 'prod' })) || [])
+        }
+      } catch (error) {
+        // ElMessage.error(error.message || '获取开发者列表失败，请稍后重试')
+      } finally {
+        this.isLoaded = true
+      } 
+      
     },
     async handleViewSecretClick(row) {
       // 查看密钥点击事件，暂时留空
@@ -163,9 +173,6 @@ export default {
       dom.style.display = 'none'
     }
     this.getDeveloperList()
-    setTimeout(() => {
-      this.isLoaded = true
-    }, 300)
   },
   beforeUnmount() {
     const dom = document.querySelector('.vp-page-title')
