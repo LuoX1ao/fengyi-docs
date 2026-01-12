@@ -1,10 +1,57 @@
+:root {
+  --vp-c-brand: #b91818;
+  --content-width: 968px;
+  --el-border-radius-base: 2px;
+  --el-color-primary: #B91818;
+}
+.theme-container .vp-page {
+    padding-top: var(--navbar-height);
+    padding-inline-start: calc(var(--sidebar-space) + 1rem);
+}
+
+
+.theme-hope-content:not(.custom) {
+      padding: 2rem 0rem;
+}
+
+.vp-page-title {
+      padding-inline: 0rem;
+}
+
+.el-table th.el-table__cell,
+.el-table.is-scrolling-none th.el-table-fixed-column--left, .el-table.is-scrolling-none th.el-table-fixed-column--right {
+  background-color: #F4F4F4;
+ 
+}
+.el-table thead,
+.el-table .cell {
+  color: #1D2129;
+}
+
+@media (max-width: 1440px) {
+
+  .theme-hope-content:not(.custom) {
+      padding: 2rem 2rem;
+}
+}
+@media (min-width: 1440px) {
+  .theme-container .vp-page {
+    padding-inline-end: calc(100vw - var(--content-width) - var(--sidebar-space) - 1rem);
+  }
+}
+
+
 // place your custom styles here
+.vp-sidebar {
+  width: 15rem;
+}
+
 .vp-sidebar-header {
   padding: 0.5rem 0.5rem;
 }
 
 .vp-sidebar-link {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.6rem;
   padding: 0.5rem 0.5rem;
 }
@@ -18,37 +65,209 @@
 }
 
 @font-face {
-
   font-family: PingFang; /* 自定义字体名称 */
-  
+
   src: url(/assets/fonts/PingFang/pingfangsc-regular.otf); /* 字体文件的路径 */
 }
 
 @media (min-width: 1440px) {
   body {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
-th, td {
-  padding: 0.5em 0.6em;
-  border: 1px solid var(--vp-c-border-hard, #d1d4d7);
-  border-right: none;
-  border-left: none;
-  transition: border-color var(--vp-t-color);
-  text-align: left;
+body {
+  font-family: "PingFang SC";
 }
 
-th {
-  font-weight: 600;
-  min-width: 4rem;
+.theme-hope-content {
+  th,
+  td {
+    padding: 0.5em 0.6em;
+    border: 1px solid var(--vp-c-border-hard, #d1d4d7);
+    border-right: none;
+    border-left: none;
+    transition: border-color var(--vp-t-color);
+    text-align: left;
+  }
+
+  th {
+    font-weight: 600;
+    min-width: 4rem;
+  }
+
+  table,
+  tbody,
+  thead {
+    width: 100%;
+    line-height: 1.5rem;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: transparent;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto; 
+     margin: 1rem 0; 
+    border-collapse: collapse;
+}
 }
 
-table,tbody,thead {
-  width: 100%;
-  line-height: 1.5rem;
+.el-table table {
+  overflow-x: unset;
+  margin: 0;
 }
 
-tbody tr:nth-child(odd) {
-  background: transparent;
+.el-table tbody tr:nth-child(odd) {
+  background-color: var(--el-table-tr-bg-color);
 }
+
+.el-button {
+  background-color: #b91818;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #D01B1B;
+    color: #fff;
+    border: none;
+  }
+
+  &.active {
+    background-color: #A21515;
+    color: #fff;
+    border: none;
+  }
+}
+
+.el-button.is-disabled {
+  background-color: rgba(185, 24, 24, 0.2);
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: rgba(185, 24, 24, 0.2);
+    color: #fff;
+    border: none;
+  }
+}
+
+.el-checkbox-group {
+  .el-checkbox {
+    height: auto;
+  }
+}
+
+.el-checkbox__inner:hover {
+  border-color: #eb6565;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #383838;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #eb6565;
+    border-color: #eb6565;
+}
+
+.el-checkbox__label {
+  line-height: 22px;
+}
+
+.el-form-item {
+    margin-bottom: 30px;
+
+    &.is-error {
+      margin-bottom: 52px;
+    }
+  }
+
+  .el-input {
+    height: 40px;
+  }
+
+  .el-form-item__label {
+    color: #383838;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "PingFang SC";
+    line-height: 24px;
+  }
+
+  .el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1px #B91818 inset;
+  }
+
+  .el-form-item.is-error .el-form-item__content .el-input__wrapper {
+    box-shadow: 0 0 0 1px #B91818 inset;
+    background-color: rgba(185, 24, 24, 0.04);
+  }
+
+  .el-form-item__error {
+    color: #B91818;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+
+  .el-table--large .cell {
+    padding: 12px 16px;
+  }
+
+  .el-tabs {
+  font-family: 'PingFang SC';
+
+  .el-tabs__item {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(56, 56, 56, 0.6);
+
+    &.is-active {
+      color: rgba(56, 56, 56, 1);
+    }
+  }
+  .el-tabs__active-bar {
+    background-color: #B91818;
+  }
+
+  .el-form-item__label {
+    font-size: 16px;
+    color: #383838;
+  }
+
+  .el-tabs__item.is-active, .el-tabs__item:hover {
+    color: rgba(56, 56, 56, 1);
+  }
+}
+
+  .el-button--primary.is-link, .el-button--primary.is-plain, .el-button--primary.is-text {
+        color: #2563EB;
+  }
+  .el-button--primary.is-link:hover, .el-button--primary.is-plain:hover, .el-button--primary.is-text:hover {
+        color: #3C74ED;
+  }
+  .el-button--primary.is-link:active, .el-button--primary.is-plain:active, .el-button--primary.is-text:active {
+        color: #1555E2;
+  }
+
+  .el-select__wrapper {
+    min-height: 40px;
+  }
+
+  .el-select__wrapper.is-focused {
+    box-shadow: 0 0 0 1px #B91818 inset;
+  }
+
+  .el-select-dropdown__item {
+    height: 40px;
+    line-height: 40px;
+  }
+
+ .theme-hope-content:not(.custom) {
+       padding: 2rem 0rem !important;
+ }

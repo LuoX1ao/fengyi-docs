@@ -3,20 +3,77 @@ import homeLayout from './layouts/Home.vue'
 import Home from './components/Home.vue'
 import Navbar from './components/Navbar.vue'
 import PageFooter from './components/PageFooter.vue'
+import Register from './components/Register.vue'
+import Login from './components/Login.vue'
+import PrivacyAgreement from './components/PrivacyAgreement.vue'
+import ResetPassword from './components/ResetPassword.vue'
+import AccountSetting from './components/AccountSetting.vue'
+import DeveloperInfo from './components/DeveloperInfo.vue'
+import ApplyDeveloper from './components/ApplyDeveloper.vue'
+import InterfaceManagement from './components/InterfaceManagement.vue'
+
+
+// 引入 Pinia
+import { pinia } from './stores'
+import { useUserStore } from './stores/user'
+
+
+// 引入Element Plus组件库和样式
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import './styles/index.scss'
+
+// import Vcode from 'vue3-puzzle-vcode'
 
 export default defineClientConfig({
   layouts: {
     homeLayout,
   },
   enhance: ({ app, router, siteData }) => {
+    // 使用Element Plus组件库
+    app.use(ElementPlus, {
+      size: 'medium',
+    })
+    
+    // 使用Pinia
+    app.use(pinia)
+    
     app.component("Navbar", Navbar);
     app.component("Home", Home);
     app.component("PageFooter", PageFooter)
+    app.component("Register", Register)
+    app.component("Login", Login)
+    app.component("PrivacyAgreement", PrivacyAgreement)
+    app.component("ResetPassword", ResetPassword)
+    app.component("AccountSetting", AccountSetting)
+    app.component("DeveloperInfo", DeveloperInfo)
+    app.component("ApplyDeveloper", ApplyDeveloper)
+    app.component("InterfaceManagement", InterfaceManagement)
+
+
+
 
     router.beforeEach((to, from, next) => {
       if (typeof window === 'object') {
         document.title = '丰翼开放平台'
       }
+      
+      // 重定向 /developer/ 到 /developer/developer-info/
+      if (to.path === '/developer/') {
+        next('/developer/developer-info/');
+        return;
+      }
+      
+      // 检查登录状态
+      const userStore = useUserStore()
+      const isLoggedIn = userStore.getLoginStatus
+      
+      // 如果用户已登录，可以在这里执行其他逻辑
+      if (isLoggedIn) {
+        console.log('用户已登录，执行相关逻辑')
+        // 例如：检查 token 有效性、获取用户最新信息等
+      }
+      
       // console.log(`全局守卫：从 ${from.path} 到 ${to.path}`);
       next(); // 必须调用 next() 继续导航
     });

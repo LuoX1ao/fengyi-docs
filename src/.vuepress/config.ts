@@ -1,6 +1,8 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
+import { viteBundler } from '@vuepress/bundler-vite'
 const __dirname = getDirname(import.meta.url);
+import vcodeFixPlugin from './vite-plugin-vcode-fix.js'
 
 import theme from "./theme.js";
 
@@ -9,6 +11,33 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '丰翼开放平台',
   description: '以生态智慧释放行业生产力无限可能',
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        proxy: {
+          '/uocs-open': {
+            target: 'http://100.117.153.216:8080',
+            changeOrigin: true,
+          },
+        }
+      },
+      ssr: {
+      noExternal: ['vue3-puzzle-vcode', 'element-plus'],
+    }
+    },
+    vuePluginOptions: {
+        plugins: [
+          vcodeFixPlugin()
+        ],
+    },
+  }),
+  vite: {
+    ssr: {
+      noExternal: ['vue3-puzzle-vcode', 'element-plus'],
+    }
+  }, // 使用根目录下的 vite.config.js
+  // 配置开发服务器代理，解决跨域问题
+  // 已迁移到 vite.config.js 文件中配置
 
   // 暂不需支持国际化
   locales: {

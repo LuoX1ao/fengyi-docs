@@ -16,7 +16,7 @@ export default hopeTheme(
     // iconAssets: "fontawesome-with-brands",
     print: false,
     logo: "/logo.svg",
-    contributors: false,
+      contributors: false,
 
     // repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -24,6 +24,9 @@ export default hopeTheme(
     toc: true,
     navbar: zhNavbar,
     breadcrumb: false,
+    breadcrumbIcon: true,
+    breadcrumbComponent: 'Auto',
+    breadcrumbLocale: true,
     sidebar: {
       // {
       //   text: "接入指引",
@@ -119,8 +122,14 @@ export default hopeTheme(
         //     "/docs/resource/uav-device-info.md",
         //   ],
         // },
-      ]
-
+      ],
+      "/developer/": [
+        {
+          text: "开发者信息",
+          link: "/developer/developer-info/",
+          // children: [],
+        },
+      ],
 
       // '/docs/': [
       //   {

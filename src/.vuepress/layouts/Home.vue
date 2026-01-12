@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <div class="header-padding"></div>
-    <main>
+    <main style="overflow: hidden; min-height: calc(100vh - 60px - 176px);">
       <Content />
     </main>
     <!-- <footer>My Custom Footer</footer> -->
@@ -80,4 +80,10 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+
+  .header-padding {
+    height: 60px;
+  }
+</style>
+  
