@@ -2,7 +2,7 @@
   <div class="developer-info">
     <div v-if="isLoaded" class="apply-bar">
       <el-button type="primary" @click="handleApplyTestClick" :class="{'has-test': hasTestDeveloper}">申请测试开发者ID</el-button>
-      <el-button v-if="hasTestDeveloper" type="primary" @click="handleApplyProdClick">申请生产开发者ID</el-button>
+      <el-button v-if="showProdApplyBtn" type="primary" @click="handleApplyProdClick">申请生产开发者ID</el-button>
     </div>
     <div v-if="isLoaded" class="table-wrapper">
       <el-table :data="tableData" border style="width: 100%" size="medium">
@@ -83,6 +83,9 @@ export default {
       const prefix = secret.slice(0, 4);
       const suffix = secret.slice(8);
       return `${prefix}****${suffix}`;
+    },
+    showProdApplyBtn() {
+      return this.hasTestDeveloper && this.tableData.some(item => item.type === 'test' && item.status === 2)
     }
   },
   methods: {
