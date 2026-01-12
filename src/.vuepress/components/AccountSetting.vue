@@ -218,8 +218,7 @@ export default {
           return;
         }
         
-        // 调用API获取验证码，type=3表示修改手机号（根据实际情况调整）
-        await api.getVerificationCode({ phone: userStore.userInfo.phone, type: '3' });
+        await api.getVerificationCode({ phone: userStore.userInfo.phone, type: '4' });
         ElMessage.success('验证码发送成功');
         
         // 开始倒计时
