@@ -191,6 +191,13 @@ export default {
         return ''
       }
     },
+    handleApplyClick(row) {
+      if (row.type === 'test') {
+        this.handleApplyTestClick()
+      } else if (row.type === 'prod') {
+        this.handleApplyProdClick()
+      }
+    }
   },
   mounted() {
     const dom = document.querySelector('.vp-page-title')
