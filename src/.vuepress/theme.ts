@@ -17,6 +17,7 @@ export default hopeTheme(
     print: false,
     logo: "/logo.svg",
       contributors: false,
+    pageInfo: false,
 
     // repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -341,7 +342,7 @@ export default hopeTheme(
       //   },
       // },
     },
-    displayFooter: true,
+    displayFooter: false,
   },
   { custom: true }
 );

@@ -131,7 +131,6 @@ export default {
     },
     handleCustomLinkClick(item) {
       // 处理自定义跳转逻辑
-      console.log("自定义点击事件:", item.name);
       // 如果用户信息的userCode为空，提示用户先申请运控权限
       // if (!this.userStore.userInfo?.userCode) {
       //   ElMessage.error('您还未申请运控权限，请先申请');
@@ -339,6 +338,22 @@ justify-content: space-between;
   .el-dropdown-menu__item:not(.is-disabled):focus {
     background-color: rgba(56, 56, 56, 0.08);
     color: #000000;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 8px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .icon-user-setting {
+    background-image: url("../assets/svg/user-setting.svg");
+  }
+  .icon-logout {
+    background-image: url("../assets/svg/logout.svg");
   }
 }
 </style>

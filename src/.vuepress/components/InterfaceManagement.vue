@@ -50,13 +50,17 @@
     <!-- 申请权限弹窗 -->
     <el-dialog
       v-model="applyDialogVisible"
-      title="申请接口权限"
+      title=""
       width="500px"
       header-class="apply-interface-dialog-header" 
+      body-class="apply-interface-dialog-body"
+      :close-on-click-modal="false"
     >
+      <div class="dialog-title">{{ type === 'test' ? '申请测试接口权限' : type === 'prod' ? '生产环境接口权限' : '' }}</div>
       <el-form :model="applyForm" :rules="rules" ref="applyFormRef" label-position="top">
         <el-form-item label="开发者ID">
-          <el-input v-model="applyForm.developerId" disabled placeholder="开发者ID" />
+          <div class="developer-id">{{ applyForm.developerId }}</div>
+          <!-- <el-input v-model="applyForm.developerId" disabled placeholder="开发者ID" /> -->
         </el-form-item>
         <el-form-item label="申请原因" prop="applyReason">
           <el-input
@@ -77,9 +81,9 @@
         </el-form-item>
       </el-form>
       <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="handleApplyDialogClose">取消</el-button>
-          <el-button type="primary" @click="handleApply" :disabled="!canSubmit">确认</el-button>
+        <span class="interface-management-dialog-footer">
+          <el-button class="cancel-btn" @click="handleApplyDialogClose">取消</el-button>
+          <el-button class="confirm-btn" type="primary" @click="handleApply" :disabled="!canSubmit">确认</el-button>
         </span>
       </template>
     </el-dialog>
@@ -404,5 +408,49 @@ h1 {
 
 :deep(.apply-interface-dialog-header) {
   display: none;
+}
+:deep(.apply-interface-dialog-body) {
+  padding: 16px 16px 12px;
+}
+
+.dialog-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
+.developer-id {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000000;
+}
+
+.interface-management-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 16px 16px;
+
+  .el-button {
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .cancel-btn {
+    width: 160px;
+    background-color: #E2E5EB;
+    color: #7D8899;
+  }
+  .confirm-btn {
+    width: 296px;
+    &.is-disabled {
+      background-color: rgba(185, 24, 24, 0.3);
+    }
+  }
+
 }
 </style>

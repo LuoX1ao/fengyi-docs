@@ -148,6 +148,10 @@ export default {
       this.router.push({ path: '/developer/developer-info/interface-management', query: { params: encryptedParams }})
     },
     async copySecret() {
+      // 确保只在客户端执行
+      if (typeof window === 'undefined') {
+        return;
+      }
       try {
         // 优先使用现代Clipboard API
         await navigator.clipboard.writeText(this.currentSecret.key);
@@ -200,16 +204,22 @@ export default {
     }
   },
   mounted() {
-    const dom = document.querySelector('.vp-page-title')
-    if (dom) {
-      dom.style.display = 'none'
+    // 确保只在客户端执行
+    if (typeof window !== 'undefined') {
+      // const dom = document.querySelector('.vp-page-title')
+      // if (dom) {
+      //   dom.style.display = 'none'
+      // }
+      this.getDeveloperList()
     }
-    this.getDeveloperList()
   },
   beforeUnmount() {
-    const dom = document.querySelector('.vp-page-title')
-    if (dom) {
-      dom.style.display = 'block'
+    // 确保只在客户端执行
+    if (typeof window !== 'undefined') {
+      // const dom = document.querySelector('.vp-page-title')
+      // if (dom) {
+      //   dom.style.display = 'block'
+      // }
     }
   }
 }

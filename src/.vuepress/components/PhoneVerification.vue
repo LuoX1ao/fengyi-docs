@@ -9,7 +9,7 @@
   >
     <!-- 自定义标题 -->
     <div slot="header" class="dialog-header">
-      <h3 class="dialog-title">{{ title }}</h3>
+      <div class="dialog-title">{{ title }}</div>
     </div>
     <div class="dialog-content">
       <p class="verify-text">{{ verifyText }} <span style="color: #2563EB;">{{ phoneMask(phoneNumber) }}</span></p>
@@ -177,7 +177,7 @@ const handleConfirm = async () => {
           });
           resetForm();
         } else {
-          ElMessage.error(res.obj?.message || '验证码验证失败，请重试');
+          ElMessage.error(res.errorMessage || res.obj?.message || '验证码验证失败，请重试');
         }
       } catch (error) {
         ElMessage.error('验证码验证失败，请重试');
@@ -205,7 +205,7 @@ const resetForm = () => {
 <style scoped>
 /* 弹窗样式 */
 .dialog-header {
-  padding: 20px 20px 0;
+  padding: 16px 16px 0;
 }
 
 .dialog-title {
@@ -217,7 +217,7 @@ const resetForm = () => {
 }
 
 .dialog-content {
-  padding: 24px 20px;
+  padding: 24px 16px;
 }
 
 .verify-text {
@@ -257,15 +257,30 @@ const resetForm = () => {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 .cancel-btn {
-  width: 120px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 160px;
 }
 
 .confirm-btn {
-  width: 120px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 296px;
+
+  &.is-disabled {
+    background-color: rgba(185, 24, 24, 0.3);
+  }
+  &.is-disabled:hover {
+    background-color: rgba(185, 24, 24, 0.3);
+  }
 }
 
 .cancel-btn,

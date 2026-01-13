@@ -188,7 +188,7 @@ const handleGetVerificationCode = async () => {
     if (response.success) {
       ElMessage.success('验证码发送成功')
     } else {
-      ElMessage.error(response.obj?.message || '验证码发送失败，请稍后重试')
+      ElMessage.error(response.errorMessage || response.obj?.message || '验证码发送失败，请稍后重试')
       return
     }
     
@@ -253,7 +253,7 @@ const handleStepOneNext = () => {
           if (res.success) {
             activeStep.value += 1
           } else {
-            ElMessage.error(res.obj?.message || '验证码验证失败，请重新输入')
+            ElMessage.error(res.errorMessage || res.obj?.message || '验证码验证失败，请重新输入')
           }
         })
         .catch(error => {
@@ -287,7 +287,7 @@ const handleStepTwoNext = () => {
             activeStep.value += 1
             startCountdown()
           } else {
-            ElMessage.error(res.obj?.message || '密码重置失败，请重新输入')
+            ElMessage.error(res.errorMessage || res.obj?.message || '密码重置失败，请重新输入')
           }
         })
         .catch(error => {

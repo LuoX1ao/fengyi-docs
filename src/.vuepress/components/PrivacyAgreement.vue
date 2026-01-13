@@ -1,6 +1,6 @@
 <template>
   <!-- 隐私协议弹窗 -->
-  <el-dialog v-model="dialogVisible" :title="''" :show-close="false" :body-class="'agreement-content'" width="640px">
+  <el-dialog v-model="dialogVisible" :title="''" :show-close="false" :close-on-click-modal="false" :body-class="'agreement-content'" width="640px">
     <div class="agreement-content-inner">
       <div>
         <p class="bold" style="text-align: center;font-size: 18px;font-weight: bold; margin-top: 0px;">
@@ -199,15 +199,15 @@
       </div>
     </div>
     <template #footer>
-      <span class="dialog-footer">
-        <el-button type="primary" @click="dialogVisible = false">同意</el-button>
+      <span class="dialog-footer dialog-footer-btn-container">
+        <el-button type="primary" class="dialog-footer-btn" @click="dialogVisible = false">好的</el-button>
       </span>
     </template>
   </el-dialog>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 // 弹窗可见性
 const dialogVisible = ref(false)
@@ -216,6 +216,13 @@ const dialogVisible = ref(false)
 defineExpose({
   open: () => {
     dialogVisible.value = true
+  }
+})
+
+watch(dialogVisible, (newVal) => {
+  if (!newVal) {
+    // 弹窗关闭时，重置滚动条位置
+    document.querySelector('.agreement-content').scrollTop = 0;
   }
 })
 </script>
@@ -245,5 +252,18 @@ defineExpose({
 :deep(.el-dialog__footer) {
   text-align: center;
   padding-bottom: 20px;
+}
+
+
+</style>
+
+<style lang="scss">
+.dialog-footer-btn-container {
+  .dialog-footer-btn {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
 </style>

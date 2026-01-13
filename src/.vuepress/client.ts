@@ -77,6 +77,28 @@ export default defineClientConfig({
       // console.log(`全局守卫：从 ${from.path} 到 ${to.path}`);
       next(); // 必须调用 next() 继续导航
     });
+
+    // 监听路由变化，根据页面是否有title决定是否显示.vp-page-title元素
+    router.afterEach((to) => {
+      if (typeof window === 'undefined') return;
+      
+      // 延迟执行，确保DOM已经渲染完成
+      setTimeout(() => {
+        const pageTitleElement = document.querySelector('.vp-page-title');
+        if (!pageTitleElement) return;
+        
+        // 获取当前页面的title（从frontmatter中获取）
+        const pageTitle = to.meta._pageChunk.data?.title;
+        
+        // 如果页面没有配置title，隐藏.vp-page-title元素
+        if (!pageTitle) {
+          pageTitleElement.style.display = 'none';
+        } else {
+          pageTitleElement.style.display = 'block';
+        }
+      }, 600);
+      return true
+    });
   },
 
   setup() {

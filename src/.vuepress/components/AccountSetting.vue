@@ -268,7 +268,7 @@ export default {
               verifyPhoneForm.verificationCode = '';
               showChangePhoneDialog.value = true;
             } else {
-              ElMessage.error(res.obj?.message || '验证码验证失败，请重试');
+              ElMessage.error(res.errorMessage || res.obj?.message || '验证码验证失败，请重试');
             }
           } catch (error) {
             ElMessage.error('验证码验证失败，请重试');

@@ -215,10 +215,10 @@ async function getVerificationCode() {
     // 调用API获取验证码，注册类型使用type="1"
     const res = await api.getVerificationCode({ phone: form.phone, type: '1' })
     if (!res.success) {
-      ElMessage.error(res.obj?.message || '获取验证码失败')
+      ElMessage.error(res.errorMessage || res.obj?.message || '获取验证码失败')
       return
     }
-    ElMessage.success(res.obj.message || '验证码发送成功')
+    ElMessage.success('验证码发送成功')
 
     // 开始倒计时
     countdown.value = 60
@@ -251,10 +251,10 @@ async function submitForm() {
     console.log('表单数据:', form)
     const res = await api.register(form)
     if (!res.success) {
-      ElMessage.error(res.obj?.message || '注册失败')
+      ElMessage.error(res.errorMessage || res.obj?.message || '注册失败')
       return false
     }
-    ElMessage.success(res.obj.message || '注册成功')
+    ElMessage.success('注册成功')
     // 注册成功后，跳转到登录页面
     setTimeout(() => {
       router.push('/login')

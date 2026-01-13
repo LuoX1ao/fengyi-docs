@@ -22,11 +22,13 @@ let loading = null;
 service.interceptors.request.use(
   (config) => {
     // // 显示加载动画
-    // loading = ElLoading.service({
-    //   lock: true,
-    //   text: '加载中...',
-    //   background: 'rgba(0, 0, 0, 0.7)'
-    // });
+    // if (typeof window !== 'undefined') {
+    //   loading = ElLoading.service({
+    //     lock: true,
+    //     text: '加载中...',
+    //     background: 'rgba(0, 0, 0, 0.7)'
+    //   });
+    // }
 
     // 如果需要，可以在这里添加token等认证信息
     if (typeof window !== 'undefined') {
@@ -45,7 +47,10 @@ service.interceptors.request.use(
     // 关闭加载动画
     // if (loading) loading.close();
     console.error('请求错误:', error);
-    ElMessage.error('请求失败，请稍后重试');
+    // 确保只在客户端执行
+    if (typeof window !== 'undefined') {
+      ElMessage.error('请求失败，请稍后重试');
+    }
     return Promise.reject(error);
   }
 );
@@ -54,7 +59,9 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response) => {
     // 关闭加载动画
-    if (loading) loading.close();
+    if (typeof window !== 'undefined' && loading) {
+      loading.close();
+    }
 
     // 调试信息：查看响应数据类型和请求URL
     console.log('请求URL:', response.config.url);
@@ -79,7 +86,9 @@ service.interceptors.response.use(
   },
   (error) => {
     // 关闭加载动画
-    if (loading) loading.close();
+    if (typeof window !== 'undefined' && loading) {
+      loading.close();
+    }
     console.error('响应错误:', error);
 
     // 错误状态码处理
@@ -89,9 +98,9 @@ service.interceptors.response.use(
           // ElMessage.error('请求参数错误');
           break;
         case 401:
-          ElMessage.error('登录已失效，请重新登录');
-          // 可以在这里添加跳转登录页的逻辑
+          // 确保只在客户端执行
           if (typeof window !== 'undefined') {
+            ElMessage.error('登录已失效，请重新登录');
             setTimeout(() => {
               localStorage.removeItem('userStore');
               window.location.href = '/login';
@@ -112,10 +121,16 @@ service.interceptors.response.use(
       }
     } else if (error.request) {
       // 请求已发送但没有收到响应
-      ElMessage.error('网络连接失败，请检查网络设置');
+      // 确保只在客户端执行
+      if (typeof window !== 'undefined') {
+        ElMessage.error('网络连接失败，请检查网络设置');
+      }
     } else {
       // 请求配置错误
-      ElMessage.error('请求配置错误');
+      // 确保只在客户端执行
+      if (typeof window !== 'undefined') {
+        ElMessage.error('请求配置错误');
+      }
     }
 
     return Promise.reject(error);
