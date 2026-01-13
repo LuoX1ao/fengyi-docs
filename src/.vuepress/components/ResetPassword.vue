@@ -68,6 +68,7 @@
             v-model.trim="passwordForm.newPassword"
             type="password"
             placeholder="请输入密码（8~20位字符，至少包含字母、数字、特殊符号其中2种）"
+            show-password
           />
         </el-form-item>
         
@@ -76,6 +77,7 @@
             v-model.trim="passwordForm.confirmPassword"
             type="password"
             placeholder="请再次输入新密码"
+            show-password
           />
         </el-form-item>
         
@@ -216,8 +218,7 @@ const passwordForm = reactive({
 const passwordRules = {
   newPassword: [
     { required: true, message: '请输入新密码', trigger: 'blur' },
-    { min: 8, max: 20, message: '密码长度为8-20个字符', trigger: 'blur' },
-    { pattern: /^[\w!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/, message: '密码只能包含字母、数字和符号', trigger: 'blur' }
+    { pattern: /^(?![a-zA-Z]+$)(?![\d]+$)(?![!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$).{8,20}$/, message: '8～20位字符，至少包含字母、数字、特殊符号其中两种', trigger: 'blur' }
   ],
   confirmPassword: [
     { required: true, message: '请确认新密码', trigger: 'blur' },
