@@ -100,6 +100,7 @@ export default {
       this.router.push({ path: '/developer/developer-info/apply-prod'})
     },
     async getDeveloperList() {
+      this.tableData = []
       try {
         const userStore = useUserStore()
         const resTest = await api.getDeveloperList({
@@ -148,11 +149,32 @@ export default {
     },
     async copySecret() {
       try {
+        // 优先使用现代Clipboard API
         await navigator.clipboard.writeText(this.currentSecret.key);
         ElMessage.success('密钥已复制');
       } catch (err) {
-        console.error('复制失败:', err);
-        ElMessage.error('复制失败，请手动复制');
+        console.error('Clipboard API复制失败:', err);
+        // 降级使用传统execCommand方法
+        try {
+          // 创建临时textarea元素
+          const textarea = document.createElement('textarea');
+          textarea.value = this.currentSecret.key;
+          // 设置样式使其不可见
+          textarea.style.position = 'fixed';
+          textarea.style.left = '-999999px';
+          textarea.style.top = '-999999px';
+          document.body.appendChild(textarea);
+          // 选中并复制
+          textarea.select();
+          textarea.setSelectionRange(0, textarea.value.length);
+          document.execCommand('copy');
+          // 移除临时元素
+          document.body.removeChild(textarea);
+          ElMessage.success('密钥已复制');
+        } catch (execErr) {
+          console.error('execCommand复制失败:', execErr);
+          ElMessage.error('复制失败，请手动复制');
+        }
       }
     },
     formatStatus(row,
